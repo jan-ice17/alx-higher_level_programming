@@ -1,11 +1,2 @@
 #!/bin/bash
-
-# Check if the PYFILE env variable is set and print error if not
-if [ -z "$PYFILE" ]; then
-    echo ":( Environment for PYFILE not set "
-    exit 1
-fi
-
-# Run pthon script
 python3 "$PYFILE"
-
