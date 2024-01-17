@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print("".join(chr(b) for b in range(ord('a'), ord('z') + 1) if chr(b) != 'e' and chr(b) != 'q'))
+for b in range(ord('a'), ord('z') + 1):
+    if b != ord('e') and b != ord('q'):
+        print(chr(b), end="")
