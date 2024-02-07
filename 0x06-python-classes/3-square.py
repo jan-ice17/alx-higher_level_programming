@@ -31,4 +31,3 @@ class Square:
         THere is a method which returns the current square area.
         """
         return self.__size ** 2
-    
