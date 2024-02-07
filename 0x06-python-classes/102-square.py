@@ -84,4 +84,3 @@ class Square:
         checks if a square is greater than or equal to another one.
         """
         return self.area() >= other.area()
-    
