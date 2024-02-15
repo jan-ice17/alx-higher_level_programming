@@ -1,17 +1,52 @@
 #!/usr/bin/python3
+"""it desfines  a Rectangle class."""
 
-"""
-Here is a  script that  demonstrates the usage of the Rectangle class from the module '2-rectangle'.
-It creates a rectangle object, sets its dimensions, and calculates its area and perimeter.
-"""
 
-Rectangle = __import__('2-rectangle').Rectangle
+class Rectangle:
+    """Represent a rectangle."""
 
-my_rectangle = Rectangle(2, 4)
-print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+    def __init__(self, width=0, height=0):
+        """Initialize a new Rectangle.
 
-print("--")
+        Args:
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
+        """
+        self.width = width
+        self.height = height
 
-my_rectangle.width = 10
-my_rectangle.height = 3
-print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+    @property
+    def width(self):
+        """Get or set the width of the Rectangle."""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        if not isinstance(value, int):
+            raise TypeError("width must be always an  integer")
+        if value < 0:
+            raise ValueError("width must be greater than or equal to 0")
+        self.__width = value
+
+    @property
+    def height(self):
+        """Get or set the height of the Rectangle."""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be greater than or equal to 0")
+        self.__height = value
+
+    def area(self):
+        """Return the area of the Rectangle."""
+        return (self.__width * self.__height)
+
+    def perimeter(self):
+        """Return the perimeter of the Rectangle."""
+        if self.__width == 0 or self.__height == 0:
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
