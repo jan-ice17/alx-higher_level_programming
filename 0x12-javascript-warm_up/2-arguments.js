@@ -6,6 +6,13 @@
 // Otherwise, print “Arguments found”
 // You must use console.log(...) to print all output
 // You are not allowed to use var Reference: process.argv
+ 
+const argv = process.argv;
 
-const count = process.argv.length;
-console.log(count === 2 ? 'No argument' : count === 3 ? 'Argument found' : 'Arguments found');
+if (argv.length === 2) {
+  console.log('No argument');  // no arg is found
+} else if (argv.length === 3) {
+  console.log('Argument found'); // only one arg
+} else {
+  console.log('Arguments found');
+}
