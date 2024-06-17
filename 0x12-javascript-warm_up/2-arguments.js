@@ -6,19 +6,6 @@
 // Otherwise, print “Arguments found”
 // You must use console.log(...) to print all output
 // You are not allowed to use var Reference: process.argv
- 
-function argumentsChecker() {
-    
-    const args = process.argv.slice(2);  // Get only the arguments excluding the first two elements
-    if (args.length === 0) {
-        console.log('No argument')
-    }
-    else if (args.length === 1) {
-        console.log('Argument found');
-    }
-    else {
-        console.log('Arguments found');
-    }
-}
 
-argumentsChecker();
+const count = process.argv.length;
+console.log(count === 2 ? 'No argument' : count === 3 ? 'Argument found' : 'Arguments found');
