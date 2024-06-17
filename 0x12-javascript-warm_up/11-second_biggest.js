@@ -5,9 +5,11 @@
 // If no argument passed, print 0
 // If the number of arguments is 1, print 0
 
-if (process.argv.length <= 2) {
+if (process.argv.length <= 3) {
     console.log(0);
-} else {
-    const s = process.argv.slice(2).map(Number).sort((x, y) => x - y);
+  } else {
+    const s = process.argv.map(Number)
+      .slice(2, process.argv.length)
+      .sort((x, y) => x - y);
     console.log(s[s.length - 2]);
-}
+  }
