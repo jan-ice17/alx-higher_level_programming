@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
-This script creates the first SQLAlchemy state model.
+It creates the first SQLAlchemy state model.
 """
 
-from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String
 
 Base = declarative_base()
 
