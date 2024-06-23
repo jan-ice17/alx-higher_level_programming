@@ -25,4 +25,3 @@ def list_all_states():
 
 if __name__ == "__main__":
     list_all_states()
-    
