@@ -1,7 +1,3 @@
 #!/bin/bash
-# A bashscript that takes in a URL
-# Sends a request to that URL
-# Displays the size of the body of the response
-
+# A bashscript that takes in a URl 
 curl -sI "$1" | grep -i Content-Length | awk '{print $2}'
-
