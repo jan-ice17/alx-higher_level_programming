@@ -3,5 +3,5 @@
 # Sends a request to that URL
 # Displays the size of the body of the response
 
-curl -sI "$1" | grep -i Content-Length | awk '{print $2}'
+curl -s "$1" | wc -c
 
